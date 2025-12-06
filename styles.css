@@ -76,7 +76,6 @@ body {
   background: linear-gradient(red, yellow, pink);
 
   /* ring effect (CSS mask) */
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 
@@ -115,19 +114,38 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-7600deg);
-  } /* insane spin preserved */
+    transform: rotate(3600deg);
+  }
 }
 
 /* -----------------------------------------------------
    CIRCLE 5 — FREESTYLE (your design goes here)
 ----------------------------------------------------- */
 .c-5 {
-  width: 300px;
-  height: 300px;
-  /* Add your multi‑color gradient / ring effect */
+  width: 11px;
+  height: 11px;
+  border-width: 100px;
+  border-style: solid;
+  border-color: #7b2cbf #fca311 #d62828;
+  border-radius: 50%;
+  animation: spin-c-5 7s linear infinite;
 }
 
-/* -----------------------------------------------------
-   END OF FILE
------------------------------------------------------ */
+@keyframes spin-c-5 {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 0 50px #7b2cbf;
+  }
+  33% {
+    transform: rotate(120deg);
+    box-shadow: 0 0 100px #fca311;
+  }
+  66% {
+    transform: rotate(240deg);
+    box-shadow: 0 0 50px #7b2cbf;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 100px #d62828;
+  }
+}
