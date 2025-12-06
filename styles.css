@@ -273,6 +273,12 @@ body {
 .o-2 {
   animation: orbit-anticlockwise 9s linear infinite;
   --radius: 240px;
+<<<<<<< HEAD
+=======
+
+.o-2 { 
+  animation: orbit-anticlockwise 9s linear infinite; --radius: 160px; 
+>>>>>>> 6c40a8e5410189d8a3889cf24033d0ead3a92489
 }
 
 /* -----------------------------------------------------
